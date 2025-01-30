@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global Styles: */
+body {
+  background-color: rgb(16, 14, 14);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Line Styles: */
+.line {
+  width: 600px;
+  height: 0.09px;
+  background-color: rgb(73, 73, 73);
+  position: relative;
+  top: 130px;
+}
+
+/* Box Styles: */
+.box {
+  padding: 15px;
+  margin-top: 100px;
+  display: inline-block;
+  border-radius: 5px;
+  border: 0.09px solid rgb(47, 46, 46);
+  box-shadow: 0px 0px 0px 1px rgb(4, 4, 4);
+  background: linear-gradient(180deg, rgb(36, 36, 36), rgb(5, 5, 5));
+  position: relative;
+  z-index: 10;
+}
+
+/* Input Styles: */
+.input {
+  padding: 5px;
+  outline: none;
+  background: linear-gradient(180deg, rgb(60, 60, 60), rgb(50, 49, 49));
+  border: 0.09px solid rgb(100, 99, 99);
+  border-radius: 5px 0px 0px 5px;
+  box-shadow: 0px 0px 0px 1px rgb(4, 4, 4);
+}
+
+/* Input Focus Styles:*/
+.input:focus {
+  animation: onFocus 1s ease-in-out 0.02s infinite alternate forwards;
+}
+
+/* Search Styles: */
+.search {
+  background: linear-gradient(180deg, rgb(60, 60, 60), rgb(50, 49, 49));
+  border: 0.09px solid rgb(100, 99, 99);
+  padding: 5px;
+  border-radius: 0px 5px 5px 0px;
+  color: white;
+  box-shadow: 0px 0px 0px 1px rgb(4, 4, 4);
+}
+
+/* Search Hover Styles: */
+.search:hover {
+  color: rgb(6, 233, 6);
+}
+
+/* Focus Animation: */
+@keyframes onFocus {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgb(100, 99, 99);
+  }
+  100% {
+    box-shadow: 0px 0px 1px 1.5px rgb(6, 233, 6);
+  }
+}
