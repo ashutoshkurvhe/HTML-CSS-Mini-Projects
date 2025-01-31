@@ -1,0 +1,128 @@
+/* 
+  Global Styles and Card Component CSS
+  Author: [Your Name]
+  Date: [Today's Date]
+*/
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, black, gray);
+}
+
+/* Container Styles */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+  gap: 40px;
+}
+
+/* Card Component Styles */
+.card {
+  width: 350px;
+  height: 500px;
+  border: 10px solid rgb(153, 150, 150);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 20px;
+  box-shadow: 5px -5px 25px 2px black;
+  overflow: hidden;
+  position: relative; /* Added to contain pseudo-elements */
+}
+
+/* Card Hover Effects */
+.card:hover {
+  color: black;
+  transition: all 1s ease-in-out 0s;
+}
+
+.card:hover::before {
+  transform: scale(150);
+  transition: all 1s ease-in-out 0s;
+}
+
+/* Card Pseudo-Element */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 1s ease-in-out 0s;
+}
+
+/* Card Content Styles */
+.card h1 {
+  margin: 100px 0 0 0;
+  font-size: 48px;
+}
+
+.card h3 {
+  text-align: end;
+}
+
+.card p {
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 35px;
+  background-color: rgba(252, 251, 251, 0.199);
+  padding: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.card button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(0, 157, 255);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card Button Hover Effect */
+.card button:hover {
+  color: aliceblue;
+  background-color: rgb(0, 115, 255);
+  transform: scale(99%);
+  transition: all 0.1s ease-in-out 0s;
+}
+
+/* Card Background Images */
+.card1 {
+  background-image: url(images/sg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card2 {
+  background-image: url(images/ai.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card3 {
+  background-image: url(images/sp.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
