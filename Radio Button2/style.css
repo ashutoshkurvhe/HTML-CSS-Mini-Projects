@@ -1,0 +1,70 @@
+/* CSS Variables for Colors and Common Values */
+:root {
+    --background-gradient: linear-gradient(black, gray);
+    --white: white;
+    --black: black;
+    --green: rgb(128, 246, 31);
+    --red: rgb(245, 46, 6);
+    --box-shadow: inset 2px 2px 5px 3px var(--black);
+    --border-radius: 50px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+/* Body Styles */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-gradient);
+}
+
+/* Container Styles */
+.cont {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    display: inline-block;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    font-size: 1.5em;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+/* Hidden Inputs */
+#yes, #no {
+    display: none;
+}
+
+/* Label Styles */
+label {
+    padding: 10px;
+    cursor: pointer; /* Improve accessibility */
+}
+
+/* Checked Styles for Yes/No */
+#yes:checked ~ label:nth-child(2) {
+    color: var(--green);
+}
+
+#no:checked ~ label:nth-child(4) {
+    color: var(--red);
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .cont {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+        padding: 8px; /* Adjust padding */
+    }
+} 
