@@ -9,6 +9,17 @@ This repository contains a collection of mini projects built using HTML and CSS.
 Below are some of the mini projects included in this repository:
 
 
+1. Blog Card  
+2. Bottom Tab Bar
+3. Card Design
+4. Glass Effect1
+5. Glowing Searchbar
+6. Neumorphic Button
+7. Radio Button
+8. Radio Button2
+9. Responsive Grid List
+
+
 
 🛠 Technologies Used
 
