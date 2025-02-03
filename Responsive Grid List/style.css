@@ -1,0 +1,166 @@
+:root{
+    --color1-:#f19e04f9;
+    --color2-:#519bfcf9;
+    --color3-:#e5de1ef9;
+    --color4-:#33d6fef9;
+    --color5-:#10d341f9;
+    --color6-:#eb9b07f9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(rgb(243, 237, 236), rgba(134, 65, 168, 0.877));
+}
+
+.cont{
+    max-width: 1000px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* background-color: aqua; */
+}
+
+.course-box{
+    width: 300px;
+    height: 80px;
+    padding: 20px;
+    position: relative;
+    background: white;
+    display: flex;
+    gap: 20px; 
+    box-shadow: 2px 2px 5px 0px gray; 
+    z-index: 0;
+}
+
+.course-box i{
+    font-size: 2.2em;
+    margin-left: 10px;
+}
+
+.course-box span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-box .title{
+    display: inline-block;
+}
+
+.course-box::after{
+    content:"";
+    display: inline-block;
+    width: 2%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.course-box{
+    color: #3c3c3c;
+}
+
+.course-box:hover i{
+    transform: scale(1.5);
+}
+
+.course-box:hover i,.course-box:hover{
+    color: white;
+}
+
+.course-box::after,.course-box i,.course-box:hover{
+    transition: all 0.6s ease-in-out 0.1s;
+}
+
+.course-box:hover::after{
+    width: 100%;
+    z-index: -1;
+}
+
+.box1::after{
+    background-color: var(--color1-);
+}
+
+.box1 i{
+    color: var(--color1-);
+}
+
+.box2::after{
+    background-color: var(--color2-);
+}
+
+.box2 i{
+    color: var(--color2-);
+}
+
+
+.box3::after{
+    background-color: var(--color3-);
+}
+
+.box3 i{
+    color: var(--color3-);
+}
+
+.box4::after{
+    background-color: var(--color4-);
+}
+
+.box4 i{
+    color: var(--color4-);
+}
+
+.box5::after{
+    background-color: var(--color5-);
+}
+
+.box5 i{
+    color: var(--color5-);
+}
+
+.box6::after{
+    background-color: var(--color6-);
+}
+
+.box6 i{
+    color: var(--color6-);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
