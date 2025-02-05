@@ -1,0 +1,150 @@
+/* Define global CSS variables for colors */
+:root{
+  --color-fb: #1c97f0; 
+  --color-insta: linear-gradient(195deg, #ef0ba3, #0606db); 
+  --color-linkedin: #063b9d; 
+  --color-wtsp: #1cf078; 
+  --color-twitter: #39a8f8; 
+  --color-sc: #d7e740; 
+  --color-black: black;
+  --color-white: white; 
+  --body-bg: linear-gradient(125deg, #f105c2, #0905ec); 
+}
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set global font family */
+body, * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Set body styles */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--body-bg);
+}
+
+/* Set container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Set icon button styles */
+.iconbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Set icon button link styles */
+.iconbtn a {
+  font-size: 1.2em;
+  color: var(--color-black);
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background-color: var(--color-white);
+  padding-top: 15px;
+  border-radius: 100%;
+  margin: 20px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Set icon button link hover styles */
+.iconbtn a:hover {
+  transform: scale(125%);
+  color: var(--color-white);
+}
+
+/* Set icon button link hover styles for each social media */
+.facebook a:hover, .facebook > span, .facebook > span::after {
+  background-color: var(--color-fb);
+  color: var(--color-white);
+}
+
+.instagram a:hover, .instagram > span, .instagram > span::after {
+  background: var(--color-insta);
+  color: var(--color-white);
+}
+
+.snapchat a:hover, .snapchat > span, .snapchat > span::after {
+  background-color: var(--color-sc);
+  color: var(--color-white);
+}
+
+.whatsapp a:hover, .whatsapp > span, .whatsapp > span::after {
+  background-color: var(--color-wtsp);
+  color: var(--color-white);
+}
+
+.linkedin a:hover, .linkedin > span, .linkedin > span::after {
+  background-color: var(--color-linkedin);
+  color: var(--color-white);
+}
+
+.twitter a:hover, .twitter > span, .twitter > span::after {
+  background-color: var(--color-twitter);
+  color: var(--color-white);
+}
+
+/* Set span styles */
+span {
+  font-size: 1em;
+  color: var(--color-black);
+  padding: 5px 5px 0px 5px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  position: relative;
+  top: -50px;
+  transform: scale(20%);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Set span after styles */
+span::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-white);
+  transform: rotate(45deg);
+  position: relative;
+  top: 5px;
+  left: 26px;
+  z-index: -999;
+}
+
+/* Set WhatsApp span after styles */
+.whatsapp span::after {
+  position: relative;
+  left: 30px;
+}
+
+/* Set Twitter span after styles */
+.twitter span::after {
+  position: relative;
+  left: 20px;
+}
+
+/* Set span hover styles */
+a:hover ~ span {
+  font-size: 1em;
+  transform: translateY(-100px) scale(100%);
+  padding: 10px 15px 1px 15px;
+  visibility: visible;
+}
