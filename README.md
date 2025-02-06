@@ -19,6 +19,7 @@ Below are some of the mini projects included in this repository:
 8. Radio Button2
 9. Responsive Grid List
 10. Social Media Icon
+11. Split Text
 
 🛠 Technologies Used
 
