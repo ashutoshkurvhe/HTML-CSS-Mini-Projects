@@ -1,0 +1,134 @@
+*,::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(218, 211, 226);
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+   margin-bottom: -20px; 
+   color: white;
+   position: relative;
+}
+
+.todoPage{
+    width: 350px;
+    height: 400px;
+    background-color: #1cb6b8;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px -5px 5px 1px gray;
+    overflow: hidden;
+}
+
+
+input[type=checkbox]{
+    display: none;
+}
+
+ul li{
+    list-style: none;
+    color: white;
+    margin: 60px 0;
+}
+
+span{
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+span::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid white;
+    transition: all 0.2s ease 0s;
+}
+
+
+
+#todo1:checked ~ .todo1{
+    text-decoration: line-through;
+}
+
+input[type=checkbox]:checked ~ label span::after{
+    transition: all 0.2s ease 0s;
+    border-color: black;
+}
+
+input[type=checkbox]:checked ~ label{
+    transition: all 0.2s ease 0s;
+    color: black;
+}
+
+#todo1:checked ~ .todo1 span::after{
+    border-right: none;
+    border-top: none;
+    width: 20px;
+    height: 12px;
+    transform: rotate(-45deg);
+}
+
+
+#todo2:checked ~ .todo2{
+    text-decoration: line-through;
+}
+
+#todo2:checked ~ .todo2 span::after{
+    border-right: none;
+    border-top: none;
+    width: 20px;
+    height: 12px;
+    transform: rotate(-45deg);
+}
+
+
+#todo3:checked ~ .todo3{
+    text-decoration: line-through;
+}
+
+#todo3:checked ~ .todo3 span::after{
+    border-right: none;
+    border-top: none;
+    width: 20px;
+    height: 12px;
+    transform: rotate(-45deg);
+}
+
+
+#todo4:checked ~ .todo4{
+    text-decoration: line-through;
+}
+
+#todo4:checked ~ .todo4 span::after{
+    border-right: none;
+    border-top: none;
+    width: 20px;
+    height: 12px;
+    transform: rotate(-45deg);
+}
+
