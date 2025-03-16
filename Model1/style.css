@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgb(250, 122, 122), white);
+  overflow-x: hidden; /* Fix horizontal scroll */
+}
+
+/* -------Model label and Checkbox styles--------- */
+
+.cont {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#model-cb::after {
+  width: 30px;
+  height: 30px;
+  padding: 3px 0px 2px 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #eee9e9;
+  content: "\2716";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  transition: all 0.3s ease;
+}
+
+#model-cb:not(:checked) {
+  visibility: hidden;
+}
+
+.model-lb {
+  font-size: 1.3em;
+  padding: 20px;
+  position: relative;
+  top: 400px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#model-cb:checked ~ .model-lb {
+  visibility: hidden;
+}
+
+#model-cb:not(:checked) ~ .model-lb {
+  visibility: visible;
+}
+
+#model-cb:checked {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: 65px;
+  left: 190px;
+  z-index: 1;
+
+  cursor: pointer;
+}
+
+#model-cb:not(:checked) ~ .model-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+}
+
+#model-cb:checked ~ .model-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* -------Model Main Content styles--------- */
+
+.model-content {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 20px;
+  position: relative;
+  top: -50px;
+  background-color: #fff;
+  box-shadow: 1px 1px 50px 0px rgb(60, 60, 60);
+  transition: all 0.3s ease;
+}
+
+.model-content h1 {
+  height: 10%;
+  padding: 20px 30px;
+}
+
+.model-content .textArea {
+  width: 100%;
+  height: 80%;
+  padding: 20px;
+  overflow: scroll;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  max-height: 60vh;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd #fff;
+}
+
+*::-webkit-scrollbar {
+  background-color: transparent;
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+  background-color: #ddd;
+  border: 4px solid #fff;
+}
+
+.model-content .textArea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.model-content .textArea::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.model-content .textArea::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+
+.model-content .textArea h3,
+h2,
+p,
+ul {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.model-content .textArea p {
+  font-weight: bold;
+}
+
+.model-content .textArea ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.model-content .btns {
+  height: 10%;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+
+.model-content .btns .btn {
+  padding: 20px 40px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.model-content .btns .btn:active {
+  transform: scale(0.98);
+}
+
+.model-content .btns .decline {
+  background: none;
+}
+
+.model-content .btns .accept {
+  background-color: rgb(249, 25, 63);
+  color: #fff;
+}
+
+.model-content .btns .accept:hover {
+  background-color: rgb(247, 66, 96);
+}
+.model-content .btns .decline:hover {
+  background-color: rgba(193, 186, 187, 0.284);
+}
+
+/* Responsive text sizes */
+@media screen and (max-width: 768px) {
+  .model-content h1 {
+    font-size: 1.5em;
+    padding: 15px 20px;
+  }
+
+  .model-content .btns .btn {
+    padding: 15px 30px;
+    font-size: 1em;
+  }
+
+  .model-lb {
+    font-size: 1.1em;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .model-content {
+    width: 95%;
+    height: auto;
+  }
+
+  .model-content .btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .model-content .btns .btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  #model-cb:checked {
+    top: 20px;
+    left: 85%;
+  }
+}
